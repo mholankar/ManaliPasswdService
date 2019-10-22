@@ -21,3 +21,14 @@ example:
 
 http://localhost:5000/users
 will get users
+
+
+4. For running unit-tests:
+pip install pytest
+
+# and then run
+pytest
+
+
+5. Testing by specifying filename
+in file app_lib.py, please change the user_file_name and user_group_name to specify a file

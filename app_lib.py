@@ -10,8 +10,13 @@ DEFAULT_GROUP_FILE = DEFAULT_FILE_PATH + GROUP_FILE_NAME
 USERS_FILE_COLS = 7
 GROUP_FILE_COLS = 4
 
+#NOTE: for now user_file_name and group_file_name can be changed
+#for testing purposes
+user_file_name = DEFAULT_USERS_FILE
+group_file_name = DEFAULT_GROUP_FILE
 
-def read_users_file(ufile_name=DEFAULT_USERS_FILE):
+
+def read_users_file(ufile_name=user_file_name):
     read_users = []
     with open(ufile_name) as fp:
         line = fp.readline()
@@ -35,7 +40,7 @@ def read_users_file(ufile_name=DEFAULT_USERS_FILE):
     return read_users
 
 
-def read_group_file(gfile_name=DEFAULT_GROUP_FILE):
+def read_group_file(gfile_name=group_file_name):
     read_group = []
     with open(gfile_name) as fp:
         line = fp.readline()
